@@ -14,18 +14,28 @@ import retrofit2.http.Query
 interface PatientApi {
 
     @GET("patients")
-    suspend fun getPatients(@Query("statut") statut: String? = null): List<Patient>
+    suspend fun getPatients(
+        @Query("statut") statut: String? = null
+    ): List<Patient>
 
     @GET("patients/{id}")
-    suspend fun getPatient(@Path("id") id: String): Patient
+    suspend fun getPatient(
+        @Path("id") id: String
+    ): Patient
 
     @POST("patients")
-    suspend fun createPatient(@Body patient: PatientRequest): Patient
+    suspend fun createPatient(
+        @Body patient: PatientRequest
+    ): Patient
 
     @PUT("patients/{id}")
-    suspend fun updatePatient(@Path("id") id: String, @Body patient: PatientRequest): Patient
+    suspend fun updatePatient(
+        @Path("id") id: String,
+        @Body patient: PatientRequest
+    ): Patient
 
-    // 204 = réponse sans corps : on récupère la réponse brute
     @DELETE("patients/{id}")
-    suspend fun deletePatient(@Path("id") id: String): Response<Unit>
+    suspend fun deletePatient(
+        @Path("id") id: String
+    ): Response<Unit>
 }

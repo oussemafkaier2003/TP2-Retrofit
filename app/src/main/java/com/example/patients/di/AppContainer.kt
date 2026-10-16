@@ -11,7 +11,7 @@ import retrofit2.converter.kotlinx.serialization.asConverterFactory
 import java.util.concurrent.TimeUnit
 
 // Émulateur : 10.0.2.2 — Téléphone réel : IP du PC (ex. http://192.168.1.20:5000/api/)
-private const val BASE_URL = "http://192.168.0.129:5000/api/"
+private const val BASE_URL = "http://192.168.1.128:5000/api/"
 
 class AppContainer {
 

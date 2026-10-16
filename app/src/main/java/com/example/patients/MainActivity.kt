@@ -8,6 +8,7 @@ import com.example.patients.ui.patients.PatientsScreen
 import com.example.patients.ui.theme.PatientsTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -19,5 +20,4 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-
 }
